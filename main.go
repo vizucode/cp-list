@@ -1,11 +1,9 @@
 package main
 
 import (
-	outlier "competitive_programming_practice/FindTheParityOutlier"
-	"fmt"
+	tower "competitive_programming_practice/BuildTower"
 )
 
 func main() {
-	ot := outlier.FindOutlier([]int{2, 4, 8, -3, 40, 20})
-	fmt.Println(ot)
+	tower.BuildTower(8)
 }
