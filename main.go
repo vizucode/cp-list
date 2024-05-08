@@ -1,39 +1,48 @@
 /*
+var length = 4
+var input = 3
 
-   var N = 5
+loops i = 2 < input:
+i*i <= input
 
-   var num // 0,2,3,4,5,6,7,8,9,0,1,2,3,4
+	if input % i == 0
+	    print("bukan")
 
-   i = 1 => 0,1,2,3,4,5
-       j = 1 to eq i => 0,[0,1],[0,1,2],[0,1,2,3],[0,1,2,3,4],[0,1,2,3,4,5]
-       num++
-       if num > 9 {
-           num = 0
-       }
-
-       print(num)
-
+print("YA")
 */
-
 package main
 
 import "fmt"
 
 func main() {
 
-	var N int
-	fmt.Scan(&N)
-	var num int
+	var length int
+	fmt.Scan(&length)
 
-	for i := 0; i < N; i++ {
-		for j := 0; j <= i; j++ {
-			fmt.Print(num)
-			num++
-			if num > 9 {
-				num = 0
+	for i := 0; i < length; i++ {
+
+		var input int
+		fmt.Scan(&input)
+
+		//var isPrime = true
+
+		for i := 2; i < input; i++ {
+			if i*i <= input {
+				if input%i == 0 {
+					//isPrime = false
+					fmt.Println("BUKAN")
+					break
+				}
+			} else {
+				fmt.Println("YA")
+				break
 			}
 		}
-		fmt.Println("")
+
+		/*if isPrime {
+		    fmt.Println("YA")
+		}*/
+
 	}
 
 }
