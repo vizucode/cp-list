@@ -1,25 +1,36 @@
+/*
+
+   var N = 5
+
+   loops: i; 1 to N (++) = 1,2,3,4,5
+       loops: space; N to i (--) = 5, 4, 3, 2, 1
+       loops: star; 1 to i (++) = 1, 2, 3, 4, 5
+
+   ####*
+   ###**
+   ##***
+   #****
+   *****
+
+*/
+
 package main
 
-import (
-	"fmt"
-	"math"
-)
+import "fmt"
 
 func main() {
-	var num float64
-	fmt.Scanln(&num)
+	var N int
+	fmt.Scan(&N)
 
-	truncated := math.Trunc(num)
-	F := int(truncated)
-	C := int(truncated)
-
-	if truncated != num {
-		if num < 0 {
-			F -= 1
-		} else {
-			C += 1
+	for i := 1; i <= N; i++ {
+		for space := N; space > i; space-- {
+			fmt.Print(" ")
 		}
+
+		for star := 1; star <= i; star++ {
+			fmt.Print("*")
+		}
+		fmt.Println("")
 	}
 
-	fmt.Printf("%d %d", F, C)
 }
