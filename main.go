@@ -1,23 +1,31 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 
-	var arr = []int{}
+	var N int
+	fmt.Scan(&N)
 
-	for {
+	var arr = make([]int, 100001)
 
-		var num int
-		_, err := fmt.Scan(&num)
-		if err != nil {
-			break
+	for i := 0; i < N; i++ {
+		var x int
+		fmt.Scan(&x)
+		arr[x]++
+	}
+
+	var maxFrequency = 0
+	var modus = 0
+
+	for i := 0; i < 100001; i++ {
+		if arr[i] >= maxFrequency {
+			modus = i
+			maxFrequency = arr[i]
 		}
-		arr = append(arr, num)
 	}
 
-	for i := len(arr) - 1; i >= 0; i-- {
-		fmt.Println(arr[i])
-	}
-
+	fmt.Println(modus)
 }
