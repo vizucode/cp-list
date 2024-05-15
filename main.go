@@ -1,9 +1,9 @@
 package main
 
 import (
-	rotatematrix "competitive_programming_practice/rotateMatrix"
+	multiplyMatrix "competitive_programming_practice/multiplyMatrix"
 )
 
 func main() {
-	rotatematrix.RotateMatrix()
+	multiplyMatrix.MultiplyMatrix()
 }
