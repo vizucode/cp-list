@@ -1,9 +1,7 @@
 package main
 
-import (
-	multiplyMatrix "competitive_programming_practice/multiplyMatrix"
-)
+import magicchange "competitive_programming_practice/MagicChange"
 
 func main() {
-	multiplyMatrix.MultiplyMatrix()
+	magicchange.MagicChange()
 }
