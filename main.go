@@ -1,7 +1,7 @@
 package main
 
-import reverseback "competitive_programming_practice/reverse_back"
+import "fmt"
 
 func main() {
-	reverseback.ReverseBack()
+	fmt.Println("Hello, sekai 1945")
 }
