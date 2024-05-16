@@ -1,7 +1,7 @@
 package main
 
-import magicchange "competitive_programming_practice/MagicChange"
+import reverseback "competitive_programming_practice/reverse_back"
 
 func main() {
-	magicchange.MagicChange()
+	reverseback.ReverseBack()
 }
