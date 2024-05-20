@@ -1,7 +1,9 @@
 package main
 
-import "fmt"
+import (
+	primefactorisation "competitive_programming_practice/PrimeFactorisation"
+)
 
 func main() {
-	fmt.Println("Hello, sekai 1945")
+	primefactorisation.PrimeFactoristation()
 }
