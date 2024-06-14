@@ -25,6 +25,7 @@ func main() {
 
 		signature := ctx.Get("X-SIGNATURE")
 		string2sign, err := String2Sign("POST", "http://localhost:6677/open/bi/v1.0/get/token", "2019-07-03T12:08:56-07:00", `{"grantType":"client_credentials"}`)
+		log.Println("server: ", string2sign)
 		if err != nil {
 			return ctx.JSON(map[string]interface{}{
 				"accessToken": "",
